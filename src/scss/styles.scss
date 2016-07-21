@@ -1,0 +1,309 @@
+@import '_variable.scss';
+
+h1, h2, h3, h4, h5 {
+	font-family: $font-caption;
+}
+
+h1 {
+	border-bottom: $c-border-h1;
+	border-top: $c-border-h1;
+	font-size: $font-size-base + 18;
+	letter-spacing: $leter-spacing;
+	margin-bottom: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 15px 0 7px;
+}
+
+h2 {
+	font-size: $font-size-base + 12;
+}
+
+h3 {
+	font-size: $font-size-base + 6;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+.page-wrapper {
+	background: url(../img/bg.jpg) no-repeat center center fixed;
+	background-color: #DCDCDC;
+	background-size: cover;
+	font: $font-size-base $font-base;
+	min-height: 100%;
+	line-height: 1.6;
+}
+
+.header {
+	color: $c-white;
+	letter-spacing: 3px;
+	max-width: 680px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	text-align: center;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+	
+	&-top {
+		clear: both;
+		margin: 30px auto 0;
+		max-width: 270px;
+		overflow: hidden;
+	}
+	
+	&-text {
+		border-bottom: 1px solid #fff;
+		font-size: $font-size-base + 10;
+	}
+
+	&-logo {
+		float: left;
+		margin-right: 20px;
+		width: 92px;
+
+	&-name {
+		float: left;
+		font: 700 $font-size-base + 50 $font-caption;
+		}
+	}
+	
+	.contacts {
+		padding: 10px 28px 0;
+		margin-bottom: 15px;
+		
+		ul {
+			overflow: hidden;
+		}
+		
+		&-list {
+			float: left;
+			font-size: $font-size-base -1;
+			padding: 0 20px;
+		}
+		
+		&-link {
+			@extend .header;
+			color: $c-link;
+		}
+		
+		&-link:hover {
+			color: $c-link-hover;
+		}
+	}
+}
+
+.nav-custom {
+	background-color: $bg-navbar;
+
+	&-list {
+		
+		li {
+			padding: 6px 15px;
+		}
+	}
+	
+	&-link {
+		color: $c-link-nav;
+		letter-spacing: $leter-spacing;
+		text-transform: uppercase;
+		}
+
+	.brand-custom {
+		border-bottom: 1px solid $c-link-nav;
+		float: none;
+		font-size: $font-size-base + 4;
+		font-weight: 600;
+	}
+	
+	.brand-custom:before {
+		content: "";
+		background: url(../img/logo-pst-head.png) no-repeat;
+		display: block;
+		float: left;
+		height: 38px;
+		margin: -9px 10px 0 0;
+		width: 43px;
+	}
+}
+
+.content {
+	flex: 1 0 auto;
+	margin: 30px 0 0;
+	text-align: justify;
+	
+	p {
+		text-indent: 40px;
+	}
+}
+
+.slider {
+	background-color: $bg-navbar;
+	margin-bottom: 50px;
+	padding: 40px 50px;
+	
+	&-img {
+		margin: 0 auto;
+	}
+	
+	&-list {
+		margin-left: 20px;
+	}
+}
+
+.item img {
+	margin: 0 auto;
+}
+
+.carousel-control.left, .carousel-control.right {
+	background-image: none;
+}
+
+.footer {
+	&-wrapper{
+	background-color: $bg-navbar;
+	padding: 10px 0 0;
+	clear: both;
+	overflow: hidden;
+	}
+	
+	&-section {
+		color: $c-link-nav;
+		padding: 0 5px 5px;
+	}
+
+	&-logo {
+		float: left;
+		margin-right: 20px;
+	}
+
+	&-name {
+		color: $c-link-nav;
+		float: left;
+		font-size: $font-size-base + 18;
+		font-weight: 600;
+	}
+	
+	&-item-logo {
+		height: 67px;
+		max-width: 200px;
+	}
+	
+	&-copyright {
+		font-size: $font-size-base - 3;
+		padding-top: 28px;
+	}
+	
+	&-contacts {
+		float: right;
+		padding-top: 5px;
+		
+		.contacts {
+			&-info {
+				display: block;
+				font-size: $font-size-base - 2;
+				padding: 0;
+			}
+			
+			&-link-f {
+				color: $c-link-nav;
+
+				&:hover {
+					color: black;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: 1200px){
+		.nav-custom {
+			&-list {
+				padding: 0px 100px;
+			}
+	}
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px){
+	.nav-custom {
+		&-list {
+			li {
+				padding: 0;
+			}
+		}
+		
+		&-link {
+			font-size: $font-size-base - 3;
+		}
+	}
+	
+	.footer {
+		&-contacts {
+			float: none;
+			text-align: center;
+		}
+		
+		&-copyright {
+			padding: 0;
+		}
+		
+		&-item-logo {
+			margin: 0 auto;
+		}
+	}
+}
+
+@media screen and (max-width: 768px){
+	.nav-custom {
+		&-list li {
+			font-size: $font-size-base - 6;
+			margin: 0;
+			padding: 0;
+		}
+		
+		&-contacts {
+			float: none;
+			text-align: center;
+		}
+	}
+	
+	.slider {
+		padding: 20px;
+	}
+
+	.footer {
+		
+		&-contacts {
+			float: none;
+			text-align: center;
+			
+			a.contacts-link-f {
+				font-size: $font-size-base - 4;
+			}
+		}
+		
+		&-item-logo {
+			margin: 0 auto;
+		}
+		
+		&-section {
+			padding: 0;
+		}
+		
+		&-copyright {
+			font-size: $font-size-base - 4;
+			padding: 10px 0 0;
+		}
+	}
+}
+
