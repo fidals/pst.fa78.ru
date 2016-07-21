@@ -1,17 +1,21 @@
-
 $font-base: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-$font-caption: "Josefin Slab","Helvetica Neue", Helvetica, sans-serif;
+$font-caption: "Josefin Slab", "Helvetica Neue", Helvetica, sans-serif;
 $font-size-base: 20px;
 
-$bg-navbar: rgba(255,255,255,0.9);
-$bg-catalog-item: rgba(39,39,37,0.4);
+$bg-navbar: rgba(255, 255, 255, 0.9);
+$bg-catalog-item: rgba(39, 39, 37, 0.4);
 
-$leter-spacing: 3px;
-
-$c-white: #ffffff;
+$c-black: #000;
+$c-border-color: #808080;
 $c-link-nav: #777;
-$c-link: rgba(249,244,56,0.8);
-$c-link-hover: rgba(249,244,56,1);
-$c-border-h1: 1px solid #808080;
+$c-link: rgba(249, 244, 56, 0.8);
+$c-link-hover: rgba(249, 244, 56, 1);
+$c-page-bg: #dcdcdc;
+$c-red: #f00;
+$c-text-shadow: #484646;
+$c-white: #fff;
 
-$t-shadow: 1px 1px 0 #484646;
+$c-border-h1: 1px solid $c-border-color;
+$text-shadow: 1px 1px 0 $c-text-shadow;
+
+$letter-spacing: 3px;

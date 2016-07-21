@@ -8,7 +8,6 @@ var del = require('del');
 var connect = require('gulp-connect');
 var livereload = require('gulp-livereload');
 
-
 // ***********************************
 // BUILD
 // ***********************************
@@ -26,9 +25,9 @@ gulp.task('jade', function() {
     .pipe(connect.reload());
 });
 
-//************************************
-//		GULP SASS
-//************************************
+// ***********************************
+// SASS
+// ***********************************
 gulp.task('sass', function() {
   return gulp.src('src/scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
@@ -37,19 +36,18 @@ gulp.task('sass', function() {
     .pipe(connect.reload());
 });
 
-//************************************
-//		GULP IMAGE
-//************************************
+// ***********************************
+// IMAGE
+// ***********************************
 gulp.task('image', function() {
   gulp.src('src/img/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest('dist/img'))
 });
 
-
-//************************************
-//		GULP SCRIPT
-//************************************
+// ***********************************
+// SCRIPT
+// ***********************************
 gulp.task('script', function() {
   gulp.src('src/js/**/*.js')
     .pipe(uglify())
@@ -60,18 +58,16 @@ gulp.task('script', function() {
     .pipe(connect.reload());
 });
 
-//************************************
-//		ClEAN
-//************************************
-
+// ***********************************
+// CLEAN
+// ***********************************
 gulp.task('clean', function() {
   return del(['dist/**/*']);
 });
 
-//************************************
-//		GULP CONNECT
-//************************************
-
+// ***********************************
+// CONNECT
+// ***********************************
 gulp.task('connect', function() {
   connect.server({
     root: 'dist',
@@ -79,45 +75,16 @@ gulp.task('connect', function() {
   });
 });
 
-// //***********************************
-//		GULP WATCH
-//**************************************
+// ***********************************
+// WATCH
+// ***********************************
 gulp.task('watch', function() {
   gulp.watch('src/**/*.jade', ['jade']);
   gulp.watch('src/scss/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['script']);
 });
 
-// //***********************************
-//		GULP
-//**************************************
+// ***********************************
+// DEFAULT
+// ***********************************
 gulp.task('default', ['watch', 'connect']);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
