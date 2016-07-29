@@ -1,63 +1,69 @@
 extend _template.jade
 
 block title
-	title PST
+  title PST
 block content
-	.slider
-		.row
-			.col-lg-12.text-center
-				#carousel-example-generic.carousel.slide(data-ride="carousel")
-					ol.carousel-indicators.hidden-xs
-						li.active(data-target='#carousel-example-generic', data-slide-to='0')
-						li(data-target='#carousel-example-generic', data-slide-to='1')
-						li(data-target='#carousel-example-generic', data-slide-to='2')
-					.carousel-inner
-						.item.active
-							img.img-responsive.img-full(src='img/paint.jpg', alt='Краска для строительства')
-						.item
-							img.img-responsive.img-full(src='img/tools.jpg', alt='Строительные инструменты')
-						.item
-							img.img-responsive.img-full(src='img/nail.jpg', alt='Гвозди')
-					a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
-						span.icon-prev
-					a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
-						span.icon-next
-	.slider
-		h1 О компании "ПСТ"
-		p
-			| Наша компания уже более 7 лет работает на рынке потребительских товаров повседневного спроса, предлагая высококачественные товары и услуги. Мы осуществляем комплексное снабжение производственных предприятий, строительных организаций, больниц, учебных заведений и т.д.
-		p
-			| Мы ценим время и средства наших заказчиков и постоянно совершенствуем формы и условия работы с тем, чтобы сделать их максимально привлекательными.
-		p
-			| Высококвалифицированный персонал нашей компании поможет составить заказ, доставит в пределах Санкт-Петербурга и Ленинградской области. Мы поможем сформировать и поддерживать товарный запас вашего предприятия, и будем информировать Вас обо всех новинках в ассортименте.
+  .slider
+    .row
+      .col-lg-12.text-center
+        #carousel-example-generic.carousel.slide(data-ride="carousel")
+          ol.carousel-indicators.hidden-xs
+            li.active(data-target='#carousel-example-generic', data-slide-to='0')
+            li(data-target='#carousel-example-generic', data-slide-to='1')
+            li(data-target='#carousel-example-generic', data-slide-to='2')
 
-		h2.text-center Сегодня к вашим услугам:
-		ul.slider-list
-			li
-				| гибкая система ценообразования, настраиваемая индивидуально под каждого клиента
+          .carousel-inner
+            .item.active
+              img.img-responsive.img-full(src='img/1.jpg')
+            .item
+              img.img-responsive.img-full(src='img/2.jpg')
+            .item
+              img.img-responsive.img-full(src='img/3.jpg')
 
-			li
-				| система мобильной торговли
+          a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
+            span.icon-prev
+          a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
+            span.icon-next
 
-			li 
-				| бесплатная доставка
+  .slider
+    h1 О компании "ПСТ"
+    p
+      | Наша компания уже более 7 лет работает на рынке потребительских товаров повседневного спроса, предлагая
+      | высококачественные товары и услуги. Мы осуществляем комплексное снабжение производственных предприятий,
+      | строительных организаций, больниц, учебных заведений и т.д.
+    p
+      | Мы ценим время и средства наших заказчиков и постоянно совершенствуем формы и условия работы с тем, чтобы
+      | сделать их максимально привлекательными.
+    p
+      | Высококвалифицированный персонал нашей компании поможет составить заказ, доставит в пределах Санкт-Петербурга
+      | и Ленинградской области. Мы поможем сформировать и поддерживать товарный запас вашего предприятия, и будем
+      | информировать Вас обо всех новинках в ассортименте.
 
-			li
-				| возврат, замена неподходящего или бракованного товара
+    h2.text-center Сегодня к вашим услугам:
+    ul.slider-list
+      li
+        | гибкая система ценообразования, настраиваемая индивидуально под каждого клиента
 
-			li
-				| оригиналы счетов, прайс-лист, договора и т.д. доставляются бесплатно курьером
+      li
+        | система мобильной торговли
 
-			li
-				| постоянным клиентам может быть предоставлена отсрочка платежа
+      li
+        | бесплатная доставка
 
-			li
-				| расчет производится в удобной для вас форме
-		p
-			| Ассортимент компании “ПСТ” насчитывает более 5000 тысяч наименований товаров, относящихся к продукции бытового назначения и к продукции профессионального назначения.
+      li
+        | возврат, замена неподходящего или бракованного товара
+
+      li
+        | оригиналы счетов, прайс-лист, договора и т.д. доставляются бесплатно курьером
+
+      li
+        | постоянным клиентам может быть предоставлена отсрочка платежа
+
+      li
+        | расчет производится в удобной для вас форме
+    p
+      | Ассортимент компании “ПСТ” насчитывает более 5000 тысяч наименований товаров, относящихся к продукции
+      | бытового назначения и к продукции профессионального назначения.
+
 script.
-	| $(function(){
-	| $('.carousel').carousel({
-	| interval: 2000
-	| });
-	| });
+  | $(function() { $('.carousel').carousel({interval: 2000}); });
