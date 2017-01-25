@@ -1,49 +1,51 @@
 extend _template.jade
 
 block title
-	title Каталог
+  title Каталог
+
 block append headStyles
-	link(rel='stylesheet', href='css/catalog.min.css')
+  link(rel='stylesheet', href='css/catalog.min.css')
+
 block content
-	.slider
-		h1 Каталог товаров
-		.row
-			.col-md-4
-				a.catalog-link(href='#')
-					.catalog-item.oborudovanie
-						.catalog-caption Оборудование
-			.col-md-4
-				a.catalog-link(href='#')
-					.catalog-item.instrument
-						.catalog-caption Инструмент
-			.col-md-4
-				a.catalog-link(href='#')
-					.catalog-item.electromaterialy
-						.catalog-caption Электроматериалы
-			.col-md-4
-				a.catalog-link(href='#')
-					.catalog-item.lamps
-						.catalog-caption Баки для люминисцентных ламп
-			.col-md-4
-				a.catalog-link(href='#')
-					.catalog-item.hoz-tovary
-						.catalog-caption Хозяйственные товары
-			.col-md-4
-				a.catalog-link(href='#')
-					.catalog-item.metall
-						.catalog-caption Металлопрокат
-			.col-md-4
-				a.catalog-link(href='#')
-					.catalog-item.remont
-						.catalog-caption 
-							|Стройматериалы на
-							br
-							| текущий ремонт
-			.col-md-4
-				a.catalog-link(href='#')
-					.catalog-item.metizy
-						.catalog-caption Метизы
-			.col-md-4
-				a.catalog-link(href='#')
-					.catalog-item.smazochnie
-						.catalog-caption Смазочные вещества и подшипники
+  .slider
+    h1 Каталог товаров
+    .row
+      .col-md-4
+        a.catalog-link.oborudovanie(href='#')
+          .catalog-item
+            .catalog-caption Оборудование
+      .col-md-4
+        a.catalog-link.instrument(href='#')
+          .catalog-item
+            .catalog-caption Инструмент
+      .col-md-4
+        a.catalog-link.electromaterialy(href='#')
+          .catalog-item
+            .catalog-caption Электроматериалы
+      .col-md-4
+        a.catalog-link.lamps(href='#')
+          .catalog-item
+            .catalog-caption Баки для люминисцентных ламп
+      .col-md-4
+        a.catalog-link.hoz-tovary(href='#')
+          .catalog-item
+            .catalog-caption Хозяйственные товары
+      .col-md-4
+        a.catalog-link.metall(href='#')
+          .catalog-item
+            .catalog-caption Металлопрокат
+      .col-md-4
+        a.catalog-link.remont(href='#')
+          .catalog-item
+            .catalog-caption
+              | Стройматериалы на
+              br
+              | текущий ремонт
+      .col-md-4
+        a.catalog-link.metizy(href='#')
+          .catalog-item
+            .catalog-caption Метизы
+      .col-md-4
+        a.catalog-link.smazochnie(href='#')
+          .catalog-item
+            .catalog-caption Смазочные вещества и подшипники

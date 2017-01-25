@@ -1,7 +1,7 @@
 block vars
+  - var mailText = "pst_spb2016@mail.ru";
   - var phoneNumber01 = "+7 (812) 242-87-33";
   - var phoneLink01 = "+8122428733";
-  - var mailText = "pst_spb2016@mail.ru";
 
 doctype html
 html
@@ -13,12 +13,10 @@ html
 
     block headLinks
       link(rel='icon', type='image/x-icon', href='img/favicon.ico')
-      link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', rel='stylesheet')
-      link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', rel='stylesheet')
-      link(href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic', rel='stylesheet')
 
     block headStyles
-      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+      link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', rel='stylesheet')
+      link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', rel='stylesheet')
       link(rel='stylesheet', href='css/styles.min.css')
 
   body.page-wrapper
@@ -72,11 +70,11 @@ html
     footer.footer-wrapper
       .container
         .row
-          .footer-section
+          .footer-section.clearfix
             .col-md-3.col-xs-12
               .footer-item-logo
-                a(href='/' title='Главная')
-                  img.img-responsive.footer-logo(src='img/logo-pst-foot.png', alt='Логотип')
+                a(class="footer-logo" href='/' title='Главная')
+                  img.img-responsive(src='img/logo-pst.png', alt='Логотип')
                 .footer-name ПСТ
             .col-md-6.col-xs-12
               .footer-copyright.text-center Copyright © 2016 "ПСТ" (Санкт-Петербург)

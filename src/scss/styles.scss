@@ -1,12 +1,5 @@
-@import "variable";
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: $font-caption;
-}
+@import "./bootstrap";
+@import "./variables";
 
 h1 {
   border-bottom: $c-border-h1;
@@ -16,7 +9,7 @@ h1 {
   margin-bottom: 40px;
   text-align: center;
   text-transform: uppercase;
-  padding: 15px 0 7px;
+  padding: 10px 0 11px;
 }
 
 h2 {
@@ -77,7 +70,7 @@ body {
 
     &-name {
       float: left;
-      font: 700 $font-size-base + 50 $font-caption;
+      font: 700 $font-size-base + 50;
     }
   }
 
@@ -91,7 +84,7 @@ body {
 
     &-list {
       float: left;
-      font-size: $font-size-base -1;
+      font-size: $font-size-base - 1;
       padding: 0 20px;
     }
 
@@ -176,36 +169,31 @@ body {
 .footer {
   &-wrapper {
     background-color: $bg-navbar;
-    padding: 10px 0 0;
-    clear: both;
     overflow: hidden;
+    padding: 10px 0 0;
   }
 
   &-section {
     color: $c-link-nav;
-    padding: 0 5px 5px;
   }
 
   &-logo {
     float: left;
-    margin-right: 20px;
+    margin: 5px 20px 0 0;
+    width: 55px;
   }
 
   &-name {
-    color: $c-link-nav;
-    float: left;
-    font-size: $font-size-base + 18;
-    font-weight: 600;
+    font-size: $font-size-base + 12;
   }
 
   &-item-logo {
     height: 67px;
-    max-width: 200px;
   }
 
   &-copyright {
     font-size: $font-size-base - 3;
-    padding-top: 17px;
+    padding-top: 20px;
   }
 
   &-contacts {
